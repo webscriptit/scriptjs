@@ -295,7 +295,7 @@ $(function () {
 
     async function fetchAddressSuggestions(postcode) {
       try {
-        const response = await fetch(`includes/ideal_postcodes_api.php?postcode=${encodeURIComponent(postcode)}`);
+        const response = await fetch(`/includes/ideal_postcodes_api.php?postcode=${encodeURIComponent(postcode)}`);
         if (response.ok) {
           const data = await response.json();
           const addressSuggestions = data.result;
